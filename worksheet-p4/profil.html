@@ -1,0 +1,105 @@
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal dan Target Olahraga Saya</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jadwal dan Target Olahraga Saya</h1>
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#jadwal-olahraga">Jadwal Olahraga</a></li>
+                <li><a href="#target-saya">Target Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda">
+            <h2>Jadwal Olahraga Mingguan</h2>
+            <table>
+                <caption>Jadwal olahraga saya dalam satu minggu</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Jenis Olahraga</th>
+                        <th scope="col">Durasi</th>
+                        <th scope="col">Target Kalori</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Senin</th>
+                        <td>lari</td>
+                        <td>30 menit</td>
+                        <td>300 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Selasa</th>
+                        <td>berenang</td>
+                        <td>45 menit</td>
+                        <td>400 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rabu</th>
+                        <td>push-up</td>
+                        <td>20 menit</td>
+                        <td>200 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Kamis</th>
+                        <td>yoga</td>
+                        <td>30 menit</td>
+                        <td>150 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jumat</th>
+                        <td>bersepeda</td>
+                        <td>60 menit</td>
+                        <td>500 kalori</td>
+                    </tr>
+                </tbody>
+            </table>
+            <figure>
+                <img src="Jadwal-Olahraga.svg" alt="___Jadwal Olahraga Mingguan Dengan Berbagai Aktivitas___"
+                    width="640" height="360" loading="lazy">
+                <figcaption>lustrasi jadwal olahraga mingguan yang menampilkan berbagai aktivitas</figcaption>
+            </figure>
+        </section>
+
+        <section id="jadwal-olahraga">
+            <h2>Catat Latihan</h2>
+            <form action="/simpan" method="post">
+                <p>
+                    <label for="nama-kolom">Jenis olahraga</label>
+                    <input type="text" id="nama-kolom" name="nama-kolom" required>
+                </p>
+                <p>
+                    <label for="tanggal-latihan">Tanggal latihan</label>
+                    <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
+                </p>
+                <p>
+                    <label for="durasi-latihan">Durasi latihan</label>
+                    <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+                </p>
+                <button type="submit">Simpan Latihan</button>
+            </form>
+        </section>
+        <section id="target-saya">
+            <h2>Target Saya</h2>
+            <p>Target saya adalah berolahraga secara rutin sesuai jadwal dan menjaga konsistensi setiap minggu.</p>
+            <ul>
+                <li>Berolahraga minimal 4 kali dalam seminggu.</li>
+                <li>Menjaga durasi latihan sesuai jadwal.</li>
+                <li>Mencatat setiap latihan yang sudah dilakukan.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Muhammad Rizki Saputra · 25523090 · 2026</p>
+    </footer>
+</body>
