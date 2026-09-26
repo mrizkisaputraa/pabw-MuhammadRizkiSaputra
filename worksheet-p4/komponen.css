@@ -18,7 +18,8 @@ textarea {
     border-radius: var(--radius-md);
     background: var(--color-surface);
     color: var(--color-fg);
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 button {
