@@ -29,11 +29,10 @@ Saya mengerjakan plan di readme sendiri tetapi beberapa syntax menggunakan AI ka
  
 | Token | Nilai | Untuk apa |
 |---|---|---|
-| --color-primary | #1D3A8C | tombol, tautan, penanda |
+| --color-primary | #2563EB | tombol, tautan, penanda |
 | --color-fg | #0F172A | warna teks utama |
 | --color-bg | #F8FAFC | latar halaman |
 | --radius-md | 0.5rem | sudut tombol dan kartu |
 | --space-4 | 1rem | jarak standar antar elemen |
  
-Kriteria selesai saya: mengubah --color-primary di satu baris
-harus mengubah warna tombol, tautan, judul, dan garis fokus.
+Kriteria selesai saya adalah warna dan token sudah diperbaiki, tema terang dan gelap berfungsi, form dan tombol sudah benar, fokus keyboard terlihat, tidak ada warna hard-code yang salah, hasil Lighthouse Accessibility mencapai 100, dan semua pertanyaan worksheet sudah diisi.
