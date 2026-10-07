@@ -1,23 +1,73 @@
-const namaLengkap = "Muhammad Rizki Saputra";
+const profil = {
+    nama: "Muhammad Rizki Saputra",
+    peran: "Mahasiswa Informatika yang belajar front-end",
+    keahlian: ["HTML", "CSS", "JavaScript"]
+};
 
-const peran = "Mahasiswa Informatika yang belajar front-end";
+/*=====================================================*/
+const daftarProyek = [
+    {
+        judul: "Halaman Profil",
+        tahun: 2026,
+        selesai: true
+    },
+    {
+        judul: "Katalog Produk",
+        tahun: 2026,
+        selesai: false
+    }
+];
 
-const keahlian = ["HTML", "CSS", "JavaScript"];
+/*=====================================================*/
+console.log(profil.nama);
+console.log(profil.peran);
+console.log(profil.keahlian);
+console.log(daftarProyek.length);
 
-const jumlahProyek = 5;
+/*=====================================================*/
+console.table(profil.keahlian);
+console.table(daftarProyek);
 
-console.log(namaLengkap);
-console.log(peran);
-console.log(keahlian);
-console.log(jumlahProyek);
+/*=====================================================*/
+const selesai = daftarProyek.filter(
+    proyek => proyek.selesai
+);
 
+console.table(selesai);
+
+/*=====================================================*/
+const katalog = daftarProyek.find(
+    proyek => proyek.judul === "Katalog Produk"
+);
+
+console.log(katalog);
+
+/*=====================================================*/
+const judulProyek = daftarProyek.map(
+    proyek => proyek.judul
+);
+
+console.log(judulProyek);
+
+/*=====================================================*/
+const urut = [...daftarProyek].sort(
+    (a, b) => a.tahun - b.tahun
+);
+console.table(urut);
+console.table(daftarProyek);
+
+/*=====================================================*/
 function buatPerkenalan(nama, peran) {
     return `Nama saya ${nama}. Saya ${peran}.`;
 }
+console.log(
+    buatPerkenalan("Rizki", "Mahasiswa Informatika")
+);
 
+/*=====================================================*/
 function formatKeahlian(keahlian) {
     return `Keahlian saya: ${keahlian.join(", ")}`;
 }
-
-globalThis.buatPerkenalan = buatPerkenalan;
-globalThis.formatKeahlian = formatKeahlian;
+console.log(
+    formatKeahlian(["HTML", "CSS", "JavaScript"])
+);
