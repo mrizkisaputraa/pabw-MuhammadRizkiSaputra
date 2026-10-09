@@ -37,21 +37,9 @@ Saya mengerjakan plan di readme sendiri tetapi beberapa syntax menggunakan AI ka
  
 Kriteria selesai saya adalah warna dan token sudah diperbaiki, tema terang dan gelap berfungsi, form dan tombol sudah benar, fokus keyboard terlihat, tidak ada warna hard-code yang salah, hasil Lighthouse Accessibility mencapai 100, dan semua pertanyaan worksheet sudah diisi.
 
-# Tugas PABW Pertemuan 8 - JavaScript Modern ES6+
-
-## Identitas
-
-Nama: Muhammad Rizki Saputra  
-Mata Kuliah: Pemrograman Aplikasi Berbasis Web (PABW)  
-Pertemuan: 8  
-Materi: JavaScript Modern ES6+
+# Tugas PABW Pertemuan 8 - JavaScript 
 
 ## Tentang Project
-
-Project ini dibuat untuk latihan menggunakan JavaScript Modern ES6+.
-
-Di tugas ini saya belajar cara menyimpan data ke dalam JavaScript, membuat function, mengolah array, dan melakukan debugging kalau ada error.
-
 Beberapa hal yang saya pelajari yaitu:
 
 - `const` dan `let`
@@ -78,4 +66,44 @@ AI saya pakai untuk:
 - Memahami `map()`, `filter()`, `find()`, dan `sort()`.
 - Membantu memahami error yang muncul di Console.
 - Membantu memahami cara menggunakan breakpoint dan debugging.
+- Mengecek apakah kode saya sudah sesuai dengan tugas.
+
+# Tugas PABW Pertemuan 9
+
+## Tentang Project**
+Project ini dibuat untuk latihan menggunakan DOM, Event, dan Interaktivitas pada JavaScript.
+
+Beberapa hal yang saya pelajari yaitu:
+- `document.querySelector()`
+- `document.querySelectorAll()`
+- `document.createElement()`
+- `textContent`
+- `append()`
+- `DocumentFragment`
+- `addEventListener()`
+- Event delegation
+- `event.target` dan `closest()`
+- `dataset`
+- `classList.toggle()`
+- Function `render()`
+- Mengolah data menggunakan `filter()`
+- Validasi form
+- `event.preventDefault()`
+- `input.value.trim()`
+- `aria-invalid`
+- Debugging menggunakan Console dan DevTools
+
+## Catatan penggunaan AI
+Dalam ngerjain tugas ini, saya menggunakan AI buat membantu memahami materi dan bagian tugas yang masih belum saya pahami.
+
+AI saya pakai untuk:
+- Menjelaskan materi DOM, Event, dan Interaktivitas.
+- Memahami cara mengambil elemen HTML menggunakan `querySelector()` dan `querySelectorAll()`.
+- Memahami cara membuat elemen menggunakan `createElement()` dan mengisi teks dengan `textContent`.
+- Memahami `addEventListener()` dan event delegation.
+- Membantu memahami cara membuat tombol filter dan menandai tombol yang sedang aktif.
+- Memahami fungsi `render()` agar daftar tidak berlipat.
+- Membantu memahami validasi form dan pesan kesalahan.
+- Membantu memahami error yang muncul di Console.
+- Membantu memahami cara menggunakan DevTools untuk memeriksa kode.
 - Mengecek apakah kode saya sudah sesuai dengan tugas.
