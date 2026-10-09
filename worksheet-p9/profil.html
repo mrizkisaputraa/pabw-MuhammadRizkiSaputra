@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal dan Target Olahraga Saya</title>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+
+</head>
+
+<body class="page">
+    <header class="navbar">
+        <div class="header-baris">
+            <h1>Jadwal dan Target Olahraga Saya</h1>
+
+            <nav aria-label="Navigasi utama">
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#jadwal-olahraga">Jadwal Olahraga</a></li>
+                    <li><a href="#target-saya">Target Saya</a></li>
+                </ul>
+            </nav>
+            <input type="checkbox" id="tema" class="pengalih-tema">
+            <label for="tema" class="tombol-tema">Tema gelap</label>
+        </div>
+    </header>
+
+    <main class="isi">
+        <section id="beranda" class="utama">
+            <h2>Jadwal Olahraga Mingguan</h2>
+            <div class="table-wrap">
+            <table>
+                <caption>Jadwal olahraga saya dalam satu minggu</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Jenis Olahraga</th>
+                        <th scope="col">Durasi</th>
+                        <th scope="col">Target Kalori</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Senin</th>
+                        <td>lari</td>
+                        <td>30 menit</td>
+                        <td>300 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Selasa</th>
+                        <td>berenang</td>
+                        <td>45 menit</td>
+                        <td>400 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rabu</th>
+                        <td>push-up</td>
+                        <td>20 menit</td>
+                        <td>200 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Kamis</th>
+                        <td>yoga</td>
+                        <td>30 menit</td>
+                        <td>150 kalori</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Jumat</th>
+                        <td>bersepeda</td>
+                        <td>60 menit</td>
+                        <td>500 kalori</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <figure>
+                <img src="Jadwal-Olahraga.svg" alt="Jadwal Olahraga Mingguan Dengan Berbagai Aktivitas" width="640"
+                    height="360" loading="lazy">
+                <figcaption>Ilustrasi jadwal olahraga mingguan yang menampilkan berbagai aktivitas</figcaption>
+            </figure>
+        </section>
+
+        <section id="jadwal-olahraga" class="bawah">
+            <h2>Catat Latihan</h2>
+            <form action="/simpan" method="post">
+
+                <div class="form-kolom">
+                    <label for="nama-kolom">Jenis olahraga</label>
+                    <input type="text" id="nama-kolom" name="nama-kolom" required>
+                    <p class="pesan-galat">Jenis olahraga wajib diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="tanggal-latihan">Tanggal latihan</label>
+                    <input type="date" id="tanggal-latihan" name="tanggal-latihan" required>
+                    <p class="pesan-galat">Tanggal latihan wajib diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="durasi-latihan">Durasi latihan</label>
+                    <input type="number" id="durasi-latihan" name="durasi-latihan" min="1" max="300" required>
+                    <p class="pesan-galat">
+                        Durasi harus diisi antara 1 sampai 300 menit.
+                    </p>
+                </div>
+
+                <button type="submit">Simpan Latihan</button>
+
+            </form>
+        </section>
+        <section id="target-saya" class="sisi">
+            <h2>Target Saya</h2>
+            <p>Target saya adalah berolahraga secara rutin sesuai jadwal dan menjaga konsistensi setiap minggu.</p>
+            <ul>
+                <li>Berolahraga minimal 4 kali dalam seminggu.</li>
+                <li>Menjaga durasi latihan sesuai jadwal.</li>
+                <li>Mencatat setiap latihan yang sudah dilakukan.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Proyek</h2>
+
+            <ul id="daftar"></ul>
+
+            <div id="filter-button">
+                <button type="button" data-kategori="semua">Semua</button>
+                <button type="button" data-kategori="web">Web</button>
+                <button type="button" data-kategori="data">Data</button>
+            </div>
+
+            <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Muhammad Rizki Saputra · 25523090 · 2026</p>
+    </footer>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/dom.js"></script>
+</body>
+</html>
