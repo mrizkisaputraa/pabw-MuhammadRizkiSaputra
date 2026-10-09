@@ -58,8 +58,8 @@ input:user-invalid {
   font-size: var(--text-sm);
 }
 
-.form-kolom:has(input:user-invalid) .pesan-galat {
-  display: block;
+.form-kolom:has(input[aria-invalid="true"]) .pesan-galat {
+    display: block;
 }
 
 figure {
@@ -138,4 +138,16 @@ figcaption {
     outline: 2px solid currentColor;
     outline-offset: 2px;
 }
+
+/* Menandai kolom yang tidak valid */
+input[aria-invalid="true"] {
+    border-color: var(--color-danger);
+    border-width: 2px;
+}
+
+/* Menampilkan pesan kesalahan pada kolom terkait */
+.form-kolom:has(input[aria-invalid="true"]) .pesan-galat {
+    display: block;
+}
+
 
