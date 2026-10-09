@@ -33,12 +33,30 @@ function tampilkanProyek(kategori = "semua") {
     pesanKosong.hidden = proyekTerpilih.length > 0;
 }
 
+
+function tandaiTombolAktif(tombolAktif) {
+    tombolFilter
+        .querySelectorAll('button[data-kategori]')
+        .forEach((tombol) => {
+            tombol.classList.toggle("aktif", tombol === tombolAktif);
+        });
+}
+
 tombolFilter.addEventListener("click", (event) => {
     const tombol = event.target.closest("button[data-kategori]");
 
     if (!tombol) return;
 
+    tandaiTombolAktif(tombol);
     tampilkanProyek(tombol.dataset.kategori);
 });
+
+const tombolSemua = tombolFilter.querySelector(
+    'button[data-kategori="semua"]'
+);
+
+if (tombolSemua) {
+    tandaiTombolAktif(tombolSemua);
+}
 
 tampilkanProyek();
