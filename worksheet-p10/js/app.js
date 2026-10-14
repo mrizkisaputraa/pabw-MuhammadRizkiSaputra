@@ -1,4 +1,4 @@
-import { muat } from "./api.js";
+import { muat, kirimContoh } from "./api.js";
 
 export const profil = {
     nama: "Muhammad Rizki Saputra",
@@ -78,7 +78,11 @@ console.log(
 async function jalankanMuat() {
     try {
         const data = await muat();
+
         console.log("Data API:", data);
+        console.log("Jumlah data:", data.length);
+
+        await kirimContoh();
     } catch (galat) {
         console.error("Pemanggil gagal menangani:", galat.message);
     }
