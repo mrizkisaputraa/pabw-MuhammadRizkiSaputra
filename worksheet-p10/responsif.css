@@ -1,0 +1,36 @@
+.isi {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "utama"
+        "bawah"
+        "sisi";
+}
+
+@media (min-width: 48rem) {
+    .isi {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 60rem) {
+    .isi {
+        grid-template-columns: minmax(16rem, 18rem) minmax(0, 1fr);
+        grid-template-areas:
+            "sisi utama"
+            "sisi bawah";
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
