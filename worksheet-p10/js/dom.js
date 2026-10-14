@@ -1,5 +1,4 @@
 import { daftarProyek } from "./app.js";
-import { muat } from "./api.js";
 
 const daftar = document.querySelector("#daftar");
 const tombolFilter = document.querySelector("#filter-button");
@@ -156,6 +155,3 @@ if (formLatihan) {
     });
 }
 
-muat()
-    .then((data) => console.log("Data API:", data))
-    .catch((error) => console.error("Gagal:", error));

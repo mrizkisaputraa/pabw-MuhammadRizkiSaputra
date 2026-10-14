@@ -1,3 +1,5 @@
+import { muat } from "./api.js";
+
 export const profil = {
     nama: "Muhammad Rizki Saputra",
     peran: "Mahasiswa Informatika yang belajar front-end",
@@ -71,4 +73,16 @@ function formatKeahlian(keahlian) {
 console.log(
     formatKeahlian(["HTML", "CSS", "JavaScript"])
 );
+
+/*=====================================================*/
+async function jalankanMuat() {
+    try {
+        const data = await muat();
+        console.log("Data API:", data);
+    } catch (galat) {
+        console.error("Pemanggil gagal menangani:", galat.message);
+    }
+}
+
+jalankanMuat();
 
