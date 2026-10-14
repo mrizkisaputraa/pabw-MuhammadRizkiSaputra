@@ -1,4 +1,5 @@
 import { daftarProyek } from "./app.js";
+import { muat } from "./api.js";
 
 const daftar = document.querySelector("#daftar");
 const tombolFilter = document.querySelector("#filter-button");
@@ -154,4 +155,57 @@ if (formLatihan) {
         alert("Validasi berhasil. Semua kolom sudah benar.");
     });
 }
+
+const wadahApi = document.querySelector("#daftar-api");
+const pesanApi = document.querySelector("#pesan-api");
+
+// Membuat satu kartu untuk setiap postingan
+function gambar(daftar) {
+    wadahApi.textContent = "";
+
+    daftar.forEach((post) => {
+        const kartu = document.createElement("article");
+        kartu.className = "kartu";
+
+        const judul = document.createElement("h3");
+        judul.className = "kartu__judul";
+        judul.textContent = post.title;
+
+        const isi = document.createElement("p");
+        isi.className = "kartu__isi";
+        isi.textContent = post.body;
+
+        kartu.appendChild(judul);
+        kartu.appendChild(isi);
+
+        wadahApi.appendChild(kartu);
+    });
+}
+
+async function tampilkanPostingan() {
+    pesanApi.textContent = "Memuat postingan...";
+
+    try {
+        const daftar = await muat();
+
+        if (!Array.isArray(daftar)) {
+            throw new Error("Data API bukan larik");
+        }
+
+        if (daftar.length === 0) {
+            wadahApi.textContent = "";
+            pesanApi.textContent = "Belum ada postingan.";
+            return;
+        }
+
+        gambar(daftar);
+        pesanApi.textContent = "";
+    } catch (galat) {
+        wadahApi.textContent = "";
+        pesanApi.textContent =
+            "Gagal memuat data: " + galat.message;
+    }
+}
+
+tampilkanPostingan();
 

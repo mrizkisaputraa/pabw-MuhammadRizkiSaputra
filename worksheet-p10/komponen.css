@@ -59,7 +59,7 @@ input:user-invalid {
 }
 
 .form-kolom:has(input[aria-invalid="true"]) .pesan-galat {
-    display: block;
+  display: block;
 }
 
 figure {
@@ -135,19 +135,51 @@ figcaption {
 }
 
 .aktif {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 /* Menandai kolom yang tidak valid */
 input[aria-invalid="true"] {
-    border-color: var(--color-danger);
-    border-width: 2px;
+  border-color: var(--color-danger);
+  border-width: 2px;
 }
 
 /* Menampilkan pesan kesalahan pada kolom terkait */
 .form-kolom:has(input[aria-invalid="true"]) .pesan-galat {
-    display: block;
+  display: block;
 }
 
 
+/* Tata letak kartu API */
+#daftar-api {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 18rem), 1fr)
+    );
+    gap: var(--space-4);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tampilan setiap kartu */
+#daftar-api .kartu {
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+    min-width: 0;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-sizing: border-box;
+}
+
+#daftar-api .kartu__judul {
+    overflow-wrap: anywhere;
+}
+
+#daftar-api .kartu__isi {
+    overflow-wrap: anywhere;
+}

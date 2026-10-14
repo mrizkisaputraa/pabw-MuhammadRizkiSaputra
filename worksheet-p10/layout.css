@@ -212,3 +212,8 @@ footer {
     min-width: 620px;
   }
 }
+
+.isi > .bagian-proyek-api {
+    grid-column: 1 / -1;
+    min-width: 0;
+}

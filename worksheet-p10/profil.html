@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,49 +35,49 @@
         <section id="beranda" class="utama">
             <h2>Jadwal Olahraga Mingguan</h2>
             <div class="table-wrap">
-            <table>
-                <caption>Jadwal olahraga saya dalam satu minggu</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Hari</th>
-                        <th scope="col">Jenis Olahraga</th>
-                        <th scope="col">Durasi</th>
-                        <th scope="col">Target Kalori</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Senin</th>
-                        <td>lari</td>
-                        <td>30 menit</td>
-                        <td>300 kalori</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Selasa</th>
-                        <td>berenang</td>
-                        <td>45 menit</td>
-                        <td>400 kalori</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Rabu</th>
-                        <td>push-up</td>
-                        <td>20 menit</td>
-                        <td>200 kalori</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Kamis</th>
-                        <td>yoga</td>
-                        <td>30 menit</td>
-                        <td>150 kalori</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Jumat</th>
-                        <td>bersepeda</td>
-                        <td>60 menit</td>
-                        <td>500 kalori</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table>
+                    <caption>Jadwal olahraga saya dalam satu minggu</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Hari</th>
+                            <th scope="col">Jenis Olahraga</th>
+                            <th scope="col">Durasi</th>
+                            <th scope="col">Target Kalori</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Senin</th>
+                            <td>lari</td>
+                            <td>30 menit</td>
+                            <td>300 kalori</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Selasa</th>
+                            <td>berenang</td>
+                            <td>45 menit</td>
+                            <td>400 kalori</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rabu</th>
+                            <td>push-up</td>
+                            <td>20 menit</td>
+                            <td>200 kalori</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kamis</th>
+                            <td>yoga</td>
+                            <td>30 menit</td>
+                            <td>150 kalori</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jumat</th>
+                            <td>bersepeda</td>
+                            <td>60 menit</td>
+                            <td>500 kalori</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <figure>
                 <img src="Jadwal-Olahraga.svg" alt="Jadwal Olahraga Mingguan Dengan Berbagai Aktivitas" width="640"
@@ -123,7 +124,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="bagian-proyek-api">
             <h2>Daftar Proyek Saya</h2>
 
             <ul id="daftar"></ul>
@@ -135,6 +136,10 @@
             </div>
 
             <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+
+            <h3>Postingan dari API</h3>
+            <div id="daftar-api" class="galeri"></div>
+            <p id="pesan-api" role="status" aria-live="polite"></p>
         </section>
     </main>
     <footer>
@@ -143,4 +148,5 @@
     <script type="module" src="js/app.js"></script>
     <script type="module" src="js/dom.js"></script>
 </body>
+
 </html>
