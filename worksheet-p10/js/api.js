@@ -1,4 +1,4 @@
-const ALAMAT = "https://jsonplaceholder.typicode.com/posts";
+const ALAMAT = "https://jsonplaceholder.typicode.com/tidak-ada";
 
 export async function muat() {
     try {

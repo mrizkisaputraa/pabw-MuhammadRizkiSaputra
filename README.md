@@ -107,3 +107,33 @@ AI saya pakai untuk:
 - Membantu memahami error yang muncul di Console.
 - Membantu memahami cara menggunakan DevTools untuk memeriksa kode.
 - Mengecek apakah kode saya sudah sesuai dengan tugas.
+
+# Tugas PABW Pertemuan 10
+
+## Tentang Project
+
+Project ini dibuat untuk latihan menggunakan Fetch API, Promise, Async/Await, JSON, dan penanganan error pada JavaScript.
+
+Beberapa hal yang saya pelajari yaitu:
+- `fetch()` untuk mengambil data dari API.
+- `async` dan `await` untuk mengatur proses pengambilan data.
+- `Promise` dan cara menangani hasil permintaan API.
+- `try/catch` untuk menangani error.
+- `response.ok` untuk memeriksa keberhasilan respons API.
+- `response.status` untuk melihat status respons, seperti 200, 404, dan 500.
+- `response.json()` untuk membaca data JSON dari API.
+- `JSON.parse()` untuk mengubah teks JSON menjadi objek JavaScript.
+- `JSON.stringify()` untuk mengubah objek JavaScript menjadi teks JSON.
+- Mengirim data menggunakan metode `POST`.
+- Menggunakan `forEach()` untuk menelusuri data dalam bentuk larik.
+- `document.createElement()` untuk membuat elemen kartu.
+- `textContent` untuk menampilkan data dari API dengan aman.
+- `appendChild()` untuk menambahkan kartu ke halaman.
+- Menampilkan keadaan memuat, berhasil, gagal, dan kosong.
+- Menangani error ketika jaringan gagal atau alamat API salah.
+- Memeriksa data sebelum membuat tampilan.
+- Menggunakan Console dan Network pada DevTools untuk memeriksa hasil permintaan API.
+
+## Catatan penggunaan AI
+
+Saya ngerjain plan yang ada di README sendiri. Tapi, karena saya masih belajar dan memahami bahasa pemrograman HTML dan JavaScript, saya menggunakan AI buat membantu memahami beberapa syntax yang belum saya pahami. Setelah itu, saya tetap ngerjain dan menyesuaikan kodenya sendiri, termasuk memperbaiki syntax dari AI yang nggak sesuai dengan plan dan kebutuhan project saya.

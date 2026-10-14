@@ -186,7 +186,7 @@ async function tampilkanPostingan() {
     pesanApi.textContent = "Memuat postingan...";
 
     try {
-        const daftar = await muat();
+        const daftar = [];
 
         if (!Array.isArray(daftar)) {
             throw new Error("Data API bukan larik");
