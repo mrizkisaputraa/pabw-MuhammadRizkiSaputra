@@ -10,7 +10,12 @@ export async function muat() {
 
         const data = await respons.json();
 
-        console.log("Judul pertama:", data[0].title);
+        if (Array.isArray(data) && data.length > 0) {
+            console.log("Judul pertama:", data[0].title);
+        } else {
+            console.log("Data API kosong atau bukan larik");
+        }
+
         console.log("Jenis data:", typeof data);
 
         return data;
