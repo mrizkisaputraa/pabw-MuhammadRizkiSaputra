@@ -1,4 +1,4 @@
-import { pilihKategori } from "./state.js";
+import { pilihKategori, resetKategori } from "./state.js";
 
 import {
     tombolFilter,
@@ -14,6 +14,11 @@ export function pasangPendengar() {
         if (!tombol) return;
 
         pilihKategori(tombol.dataset.kategori);
+    });
+    const tombolAturUlang = document.querySelector("#atur-ulang");
+
+    tombolAturUlang.addEventListener("click", () => {
+        resetKategori();
     });
 
     if (!formLatihan) return;
