@@ -137,3 +137,32 @@ Beberapa hal yang saya pelajari yaitu:
 ## Catatan penggunaan AI
 
 Saya ngerjain plan yang ada di README sendiri. Tapi, karena saya masih belajar dan memahami bahasa pemrograman HTML dan JavaScript, saya menggunakan AI buat membantu memahami beberapa syntax yang belum saya pahami. Setelah itu, saya tetap ngerjain dan menyesuaikan kodenya sendiri, termasuk memperbaiki syntax dari AI yang nggak sesuai dengan plan dan kebutuhan project saya.
+
+# Tugas PABW Pertemuan 11
+
+## Tentang Project
+
+Project ini dibuat untuk latihan memisahkan kode JavaScript menjadi beberapa modul, mengelola state, dan menyimpan pilihan pengguna menggunakan `localStorage`.
+
+Beberapa hal yang saya pelajari yaitu:
+- Memisahkan kode JavaScript ke dalam beberapa file menggunakan `import` dan `export`.
+- Menggunakan `data.js` untuk menyimpan data dan fungsi pemformat.
+- Menggunakan `state.js` untuk mengelola keadaan aplikasi.
+- Menggunakan `dom.js` untuk memilih elemen HTML dan memperbarui tampilan halaman.
+- Menggunakan `events.js` untuk menangani interaksi pengguna.
+- Menggunakan `app.js` untuk mengimpor modul dan menjalankan aplikasi.
+- Menggunakan `render()` untuk menampilkan ulang data pada halaman.
+- Menggunakan `filter()` untuk menampilkan proyek berdasarkan kategori.
+- Menggunakan `localStorage.setItem()` untuk menyimpan pilihan kategori.
+- Menggunakan `localStorage.getItem()` untuk membaca data yang tersimpan.
+- Menggunakan `localStorage.removeItem()` untuk menghapus pilihan yang tersimpan.
+- Menggunakan `JSON.stringify()` untuk mengubah objek menjadi teks JSON.
+- Menggunakan `JSON.parse()` untuk membaca teks JSON menjadi objek JavaScript.
+- Menggunakan `try/catch` untuk menangani simpanan yang rusak.
+- Memeriksa versi data yang tersimpan agar sesuai dengan format yang digunakan.
+- Mengembalikan kategori ke nilai bawaan ketika belum ada simpanan atau data tidak valid.
+- Menggunakan Console pada DevTools untuk menguji dan memeriksa error pada program.
+
+## Catatan Penggunaan AI
+
+saya menggunakan AI untuk membantu memahami beberapa syntax dan konsep yang belum saya pahami. AI juga membantu memberikan penjelasan tentang pemisahan modul, pengelolaan state, penggunaan `localStorage`, dan cara menguji program. Setelah itu, saya tetap menyesuaikan kode dengan plan dan kebutuhan project saya, serta memeriksa hasilnya agar sesuai dengan instruksi tugas.
