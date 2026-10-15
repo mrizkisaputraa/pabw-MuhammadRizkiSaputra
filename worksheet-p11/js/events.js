@@ -1,10 +1,8 @@
-import { state, pilihKategori } from "./state.js";
+import { pilihKategori } from "./state.js";
 
 import {
     tombolFilter,
     formLatihan,
-    render,
-    tandaiTombolAktif
 } from "./dom.js";
 
 export function pasangPendengar() {
@@ -15,20 +13,7 @@ export function pasangPendengar() {
 
         if (!tombol) return;
 
-        const kategori = tombol.dataset.kategori;
-
-        pilihKategori(kategori);
-        tandaiTombolAktif(tombol);
-
-        const proyekTerpilih = state.daftarProyek.filter((proyek) => {
-            return (
-                state.kategoriAktif === "semua" ||
-                proyek.kategori.toLowerCase() ===
-                state.kategoriAktif.toLowerCase()
-            );
-        });
-
-        render(proyekTerpilih);
+        pilihKategori(tombol.dataset.kategori);
     });
 
     if (!formLatihan) return;

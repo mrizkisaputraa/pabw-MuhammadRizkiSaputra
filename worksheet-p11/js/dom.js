@@ -16,23 +16,43 @@ export function buatKartu(proyek) {
     return kartu;
 }
 
-export function render(data) {
+export function saring(state) {
+    return state.daftarProyek.filter((proyek) => {
+        return (
+            state.kategoriAktif === "semua" ||
+            proyek.kategori.toLowerCase() ===
+                state.kategoriAktif.toLowerCase()
+        );
+    });
+}
+
+export function render(state) {
     daftar.textContent = "";
 
-    if (data.length === 0) {
+    const tampil = saring(state);
+
+    if (tampil.length === 0) {
         pesanKosong.hidden = false;
-        return;
+    } else {
+        pesanKosong.hidden = true;
+
+        const fragmen = document.createDocumentFragment();
+
+        tampil.forEach((proyek) => {
+            fragmen.append(buatKartu(proyek));
+        });
+
+        daftar.append(fragmen);
     }
 
-    pesanKosong.hidden = true;
-
-    const fragmen = document.createDocumentFragment();
-
-    data.forEach((proyek) => {
-        fragmen.append(buatKartu(proyek));
-    });
-
-    daftar.append(fragmen);
+    tombolFilter
+        .querySelectorAll("button[data-kategori]")
+        .forEach((tombol) => {
+            tombol.classList.toggle(
+                "aktif",
+                tombol.dataset.kategori === state.kategoriAktif
+            );
+        });
 }
 
 export function tandaiTombolAktif(tombolAktif) {
