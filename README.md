@@ -166,3 +166,28 @@ Beberapa hal yang saya pelajari yaitu:
 ## Catatan Penggunaan AI
 
 saya menggunakan AI untuk membantu memahami beberapa syntax dan konsep yang belum saya pahami. AI juga membantu memberikan penjelasan tentang pemisahan modul, pengelolaan state, penggunaan `localStorage`, dan cara menguji program. Setelah itu, saya tetap menyesuaikan kode dengan plan dan kebutuhan project saya, serta memeriksa hasilnya agar sesuai dengan instruksi tugas.
+
+# PABW Pertemuan 12 
+
+## Deskripsi
+Proyek ini merupakan lanjutan dari tugas PABW Pertemuan 11. Pada pertemuan ini, halaman dipindahkan ke Vue 3 menggunakan Vite. Kode dibagi menjadi beberapa komponen agar lebih terstruktur dan mudah dikelola.
+
+## Fitur
+- Menampilkan profil dan daftar proyek.
+- Memfilter proyek berdasarkan kategori.
+- Menyimpan pilihan kategori menggunakan `localStorage`.
+- Mengembalikan filter ke kategori semua melalui tombol reset.
+- Mengelola formulir kontak menggunakan Vue.
+
+## Struktur Komponen
+- `KepalaProfil.vue`: menampilkan informasi profil.
+- `TombolFilter.vue`: menangani pilihan kategori dan mengirim event.
+- `DaftarProyek.vue`: menampilkan proyek sesuai kategori.
+- `FormKontak.vue`: menangani formulir kontak.
+
+## node dan npm
+- Node.js: v24.21.0
+- npm: 11.19.0
+
+## Penggunaan AI
+AI digunakan sebagai alat bantu untuk memahami materi dan mencari solusi ketika mengalami kendala. Kode dipelajari, diperiksa, dan diuji kembali selama pengerjaan proyek.
