@@ -1,32 +1,51 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, watch } from 'vue'
 import KepalaProfil from './components/KepalaProfil.vue'
 import TombolFilter from './components/TombolFilter.vue'
 import DaftarProyek from './components/DaftarProyek.vue'
 import FormKontak from './components/FormKontak.vue'
 
-const identitas = {
-  nama: 'Muhammad Rizki Saputra',
-  peran: 'Mahasiswa Informatika yang belajar front-end',
-}
+import { profil } from './data.js'
+import { state, pilihKategori } from './state.js'
+import { muat, simpan, aturUlang } from './simpanan.js'
 
-const kategoriAktif = ref('semua')
+onMounted(() => {
+  const isi = muat()
+
+  if (isi && ['semua', 'Web', 'data'].includes(isi.kategoriAktif)) {
+    pilihKategori(isi.kategoriAktif)
+  }
+})
+
+watch(
+  () => state.kategoriAktif,
+  () => simpan(state)
+)
 
 function ubahKategori(kategori) {
-  kategoriAktif.value = kategori
+  pilihKategori(kategori)
+}
+
+function resetKategori() {
+  aturUlang()
+  pilihKategori('semua')
 }
 </script>
 
 <template>
   <main>
-    <KepalaProfil :profil="identitas" />
+    <KepalaProfil :profil="profil" />
+
+    <button type="button" @click="resetKategori">
+      Reset Filter
+    </button>
 
     <TombolFilter
-      :kategori-aktif="kategoriAktif"
+      :kategori-aktif="state.kategoriAktif"
       @pilih-kategori="ubahKategori"
     />
 
-    <DaftarProyek :kategori-aktif="kategoriAktif" />
+    <DaftarProyek :kategori-aktif="state.kategoriAktif" />
 
     <FormKontak />
   </main>
