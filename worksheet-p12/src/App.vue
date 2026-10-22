@@ -1,20 +1,33 @@
 <script setup>
-import { profil, daftarProyek, buatPerkenalan, formatKeahlian } from './data.js'
+import { ref } from 'vue'
+import KepalaProfil from './components/KepalaProfil.vue'
+import TombolFilter from './components/TombolFilter.vue'
+import DaftarProyek from './components/DaftarProyek.vue'
+import FormKontak from './components/FormKontak.vue'
+
+const identitas = {
+  nama: 'Muhammad Rizki Saputra',
+  peran: 'Mahasiswa Informatika yang belajar front-end',
+}
+
+const kategoriAktif = ref('semua')
+
+function ubahKategori(kategori) {
+  kategoriAktif.value = kategori
+}
 </script>
 
 <template>
   <main>
-    <h1>Halaman Anda</h1>
+    <KepalaProfil :profil="identitas" />
 
-    <h2>{{ profil.nama }}</h2>
-    <p>{{ buatPerkenalan(profil.nama, profil.peran) }}</p>
-    <p>{{ formatKeahlian(profil.keahlian) }}</p>
+    <TombolFilter
+      :kategori-aktif="kategoriAktif"
+      @pilih-kategori="ubahKategori"
+    />
 
-    <h2>Daftar Proyek</h2>
-    <ul>
-      <li v-for="proyek in daftarProyek" :key="proyek.judul">
-        {{ proyek.judul }} — {{ proyek.tahun }} — {{ proyek.kategori }}
-      </li>
-    </ul>
+    <DaftarProyek :kategori-aktif="kategoriAktif" />
+
+    <FormKontak />
   </main>
 </template>

@@ -14,6 +14,11 @@ export const daftarProyek = [
         judul: "Katalog Produk",
         tahun: 2026,
         kategori: "data"
+    },
+    {
+        judul: "Jadwal Olahraga",
+        tahun: 2026,
+        kategori: "Web"
     }
 ];
 
